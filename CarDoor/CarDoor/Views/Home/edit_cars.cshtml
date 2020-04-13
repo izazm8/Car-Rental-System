@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>Dashio - Bootstrap Admin Template</title>
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/ap/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="~/Content/ap/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Content/ap/lib/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/ap/lib/bootstrap-daterangepicker/daterangepicker.css" />
+    <!-- Custom styles for this template -->
+    <link href="~/Content/ap/css/style.css" rel="stylesheet">
+    <link href="~/Content/ap/css/style-responsive.css" rel="stylesheet">
+
+    <!-- =======================================================
+      Template Name: Dashio
+      Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+      Author: TemplateMag.com
+      License: https://templatemag.com/license/
+    ======================================================= -->
+</head>
+
+<body>
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+            TOP BAR CONTENT & NOTIFICATIONS
+            *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+            MAIN SIDEBAR MENU
+            *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+            MAIN CONTENT
+            *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <h3><i class="fa fa-angle-right"></i> Add Cars</h3>
+                <!-- BASIC FORM ELELEMNTS -->
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-angle-right"></i> Add Info</h4>
+                            @{string link = "/Home/edit_cars_?id=" + @ViewBag.car_.Id;}
+
+                            <form action="@link" class="form-horizontal style-form" method="post" enctype="multipart/form-data">
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Company</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="focusedInput" type="text" name="company_name" value="@ViewBag.car_.company">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Model</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="car_model" value="@ViewBag.car_.model">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Description</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="description" placeholder="" value="@ViewBag.car_.description">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Car Num</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="car_num" value="@ViewBag.car_.car_number">
+                                        @*<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>*@
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Rent</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control round-form" name="car_rent" value="@ViewBag.car_.rent">
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Add Picture</label>
+                                    <div class="col-sm-10">
+                                        <input type="file" class="form-control round-form" id="file" name="file" accept="image/*" value="@ViewBag.car_.path">
+
+                                    </div>
+                                </div>
+                                <input style="margin-left:955px;" type="submit" value="Add Car" />
+                            </form>
+                        </div>
+                    </div>
+                    <!-- col-lg-12-->
+                </div>
+
+            </section>
+            <!-- /wrapper -->
+        </section>
+        <!-- /MAIN CONTENT -->
+        <!--main content end-->
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                <p>
+                    &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
+                </p>
+                <div class="credits">
+                    <!--
+                      You are NOT allowed to delete the credit link to TemplateMag with free version.
+                      You can delete the credit link only if you bought the pro version.
+                      Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
+                      Licensing information: https://templatemag.com/license/
+                    -->
+                    Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+                </div>
+                <a href="form_component.html#" class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </a>
+            </div>
+        </footer>
+        <!--footer end-->
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="~/Content/ap/lib/jquery/jquery.min.js"></script>
+    <script src="~/Content/ap/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="~/Content/ap/lib/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="~/Content/ap/lib/jquery.scrollTo.min.js"></script>
+    <script src="~/Content/ap/lib/jquery.nicescroll.js" type="text/javascript"></script>
+    <!--common script for all pages-->
+    <script src="~/Content/ap/lib/common-scripts.js"></script>
+    <!--script for this page-->
+    <script src="~/Content/ap/lib/jquery-ui-1.9.2.custom.min.js"></script>
+    <!--custom switch-->
+    <script src="~/Content/ap/lib/bootstrap-switch.js"></script>
+    <!--custom tagsinput-->
+    <script src="~/Content/ap/lib/jquery.tagsinput.js"></script>
+    <!--custom checkbox & radio-->
+    <script type="text/javascript" src="~/Content/ap/lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="~/Content/ap/lib/bootstrap-daterangepicker/date.js"></script>
+    <script type="text/javascript" src="~/Content/ap/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/Content/ap/lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+    <script src="~/Content/ap/lib/form-component.js"></script>
+
+</body>
+
+</html>

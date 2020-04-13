@@ -1,0 +1,114 @@
+﻿
+<header id="header-area" class="fixed-top">
+    <!--== Header Top Start ==-->
+    <div id="header-top" class="d-none d-xl-block">
+        <div class="container">
+            <div class="row">
+                <!--== Single HeaderTop Start ==-->
+                <div class="col-lg-3 text-left">
+                    <i class="fa fa-map-marker"></i> 802/2, Mirpur, Dhaka
+                </div>
+
+
+
+                <!--== Single HeaderTop End ==-->
+                <!--== Single HeaderTop Start ==-->
+                <div class="col-lg-3 text-center">
+                    <i class="fa fa-mobile"></i> +1 800 345 678
+                </div>
+                <!--== Single HeaderTop End ==-->
+                <!--== Single HeaderTop Start ==-->
+                <div class="col-lg-3 text-center">
+                    <i class="fa fa-clock-o"></i> Mon-Fri 09.00 - 17.00
+                </div>
+                <!--== Single HeaderTop End ==-->
+                <!--== Social Icons Start ==-->
+                <div class="col-lg-3 text-right">
+                    <div class="header-social-icons">
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!--== Social Icons End ==-->
+            </div>
+        </div>
+    </div>
+    <!--== Header Top End ==-->
+    <!--== Header Bottom Start ==-->
+    <div id="header-bottom">
+        <div class="container">
+            <div class="row">
+                <!--== Logo Start ==-->
+                <div class="col-lg-4">
+                    <a href="index.html" class="logo">
+                        <img src="~/Content/img/logo.png" alt="JSOFT">
+                    </a>
+                </div>
+                <!--== Logo End ==-->
+                <!--== Main Menu Start ==-->
+                <div class="col-lg-8 d-none d-xl-block">
+                    <nav class="mainmenu alignright">
+                        <ul>
+                            <li class="active">
+                                <a href="~/Home/Index">Home</a>
+
+                            </li>
+                            <li><a href="~/Home/about">About</a></li>
+                            <li><a href="~/Home/services">services</a></li>
+                            <li>
+                                <a href="~/Home/car_right_sidebar">Cars</a>
+                                @*<ul>
+                                        <li><a href="~/Home/car_left_sidebar">Car Left Sidebar</a></li>
+                                        <li><a href="~/Home/car_right_sidebar">Car Right Sidebar</a></li>
+                                        <li><a href="~/Home/car_without_sidebar">Car Without Sidebar</a></li>
+                                        <li><a href="~/Home/car_details">Car Details</a></li>
+                                    </ul>*@
+                            </li>
+                            <li>
+                                <a href="~/Home/driver">Drivers</a>
+                                @*<ul>
+                                        <li><a href="~/Home/package">Pricing</a></li>
+                                        <li><a href="~/Home/driver">Driver</a></li>
+                                        <li><a href="~/Home/faq">FAQ</a></li>
+                                        <li><a href="~/Home/gallery">Gallery</a></li>
+                                        <li><a href="~/Home/help_desk">Help Desk</a></li>
+                                        <li><a href="~/Home/login">Log In</a></li>
+                                        <li><a href="~/Home/register">Register</a></li>
+                                        <li><a href="~/Home/_404">404</a></li>
+                                    </ul>*@
+                            </li>
+
+                            @*<li><a href="~/Home/contact">Contact</a></li>*@
+
+                            <li>
+                                @if (Session["type"] == null)
+                                {
+                                    <a href="~/Home/login">Log In</a>
+                                }
+                                @if (Session["type"] != null)
+                                {
+                                    <a href="~/Home/Logout">Logout</a>
+                                }
+
+                                @*<ul>
+                                            <li><a href="~/Home/article">Blog Page</a></li>
+                                            <li><a href="~/Home/article_details">Blog Details</a></li>
+                                    </ul>*@
+                            </li>
+                            <li>
+                                @if (Session["type"] != null)
+                                {
+                                    <a href="/Home/booking">Bookings</a>
+                                }
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--== Main Menu End ==-->
+            </div>
+        </div>
+    </div>
+    <!--== Header Bottom End ==-->
+</header>

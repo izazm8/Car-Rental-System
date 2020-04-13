@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="cardoordb" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\cardoordb.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="cardoordbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="first_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="last_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="phone_no" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Driver" Member="Drivers">
+    <Type Name="Driver">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="driver_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="facebook" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="twitter" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="reviews" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="picture_path" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="mail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bookings" Member="bookings">
+    <Type Name="booking">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pick_up_location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="car" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="return_date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pick_up_date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="driver" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bill_wo_fine" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="fine" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="bill_with_fine" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="iscompleted" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.location" Member="locations">
+    <Type Name="location">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="stop_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cars" Member="Cars">
+    <Type Name="Car">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="company" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="model" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="car_number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rent" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="air_conditioned" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="diesel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="automatic" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rating" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="path" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="isbooked" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
